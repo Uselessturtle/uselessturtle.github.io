@@ -10,7 +10,6 @@
 }
 
 .stats-container {
-	width: 50%;
 	/* #034c15 #044f10 #041c04 */
 /*	float: left;
 	width: 50%;*/
@@ -18,9 +17,26 @@
 	/*background-color: #034c15;*/
 }
 
+.chart-container {
+	width: 50%;
+	float: left;
+}
+
 
 .applicant-container {
 /*	float:left;
 	width: 50%;*/
-	background-color: #044f10;
+	/*background-color: #044f10;*/
+}
+
+#applicantTable {
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: white;
+}
+
+tr:nth-child(odd) {
+	background-color: #9f9f9f;
 }
