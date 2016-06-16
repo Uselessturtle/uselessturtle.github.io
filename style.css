@@ -1,0 +1,26 @@
+/* Browser overrides */
+
+* { margin: 0; padding: 0; }
+
+/* Custom CSS */
+
+.content-container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.stats-container {
+	width: 50%;
+	/* #034c15 #044f10 #041c04 */
+/*	float: left;
+	width: 50%;*/
+	/*height: 100vh;*/
+	/*background-color: #034c15;*/
+}
+
+
+.applicant-container {
+/*	float:left;
+	width: 50%;*/
+	background-color: #044f10;
+}
