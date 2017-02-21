@@ -7,36 +7,39 @@
 .content-container {
 	width: 960px;
 	margin: 0 auto;
+	font-family: helvetica;
 }
 
-.stats-container {
-	/* #034c15 #044f10 #041c04 */
-/*	float: left;
-	width: 50%;*/
-	/*height: 100vh;*/
-	/*background-color: #034c15;*/
-}
-
-.chart-container {
+.panache-container {
 	width: 50%;
 	float: left;
 }
 
+	.panache-container label {
+		font-size: 2em;
+	}
 
-.applicant-container {
-/*	float:left;
-	width: 50%;*/
-	/*background-color: #044f10;*/
-}
+	.panache-container input {
+		font-size: 2em;
+		width: 50px;
+		text-align: center;
+	}
 
-#applicantTable {
-	width: 100%;
-}
 
-tr:nth-child(even) {
-	background-color: white;
-}
+	#accordion {
+		width: 85%;
+		float: left;
+	}
 
-tr:nth-child(odd) {
-	background-color: #9f9f9f;
-}
+		#accordion h3 {
+			font-size: .8em;
+		}
+
+		#accordion p {
+			font-size: .6em;
+		}
+
+	.use-deed-buttons {
+		width: 15%;
+		float: right;
+	}
