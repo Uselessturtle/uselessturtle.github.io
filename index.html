@@ -1,58 +1,98 @@
-<!DOCTYPE HTML>
+<!doctype HTML>
 
-<html lang="en">
+<html>
 
-<head>
-	<meta charset="utf-8">
-	<title>Uselessturtle.io</title>
+<style>
 
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="style.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+body {
+	background-color: #36454f;
+}
 
-	<script>
-	$( function() {
-		$( "#accordion" ).accordion({
-			collapsible: true,
-			active: false,
-			heightStyle: "content"
-		});
-	} );
-	</script>
+.pulse-circle {
+	position: absolute;
+	top: 230px;
+	left: 230px;
+    border: 4px solid #db3498;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
 
-</head>
+
+.circle-one {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+    border: 4px solid transparent;
+    border-top: 4px solid #3498db; 
+    border-right: 4px solid #3498db; 
+    border-bottom: 4px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+.circle-two {
+	position: absolute;
+	top: 190px;
+	left: 190px;
+    border: 4px solid transparent;
+    border-left: 4px solid #db7734; 
+    border-right: 4px solid #db7734; 
+    border-bottom: 4px solid #db7734; 
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    animation: spinCounter 2.5s linear infinite;
+}
+
+.circle-three {
+	position: absolute;
+	top: 180px;
+	left: 180px;
+    border: 4px solid transparent;
+    border-left: 4px solid #34db77; 
+    border-right: 4px solid #34db77; 
+    border-bottom: 4px solid #34db77; 
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    animation: spin 3s linear infinite;
+}
+
+.circle-four {
+	position: absolute;
+	top: 170px;
+	left: 170px;
+    border: 4px solid transparent;
+    border-left: 4px solid #db3498; 
+    border-right: 4px solid #db3498; 
+    border-bottom: 4px solid #db3498; 
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    animation: spinCounter 3.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounter {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+</style>
 
 <body>
 
-	<div class="content-container">
-		<div class="panache-container">
-			<label>Panache</label>
-			<input type="text"></input>
-
-			<div id="accordion">
-				<h3>Derring-Do (Ex) - Be more skillful</h3>
-				<div>
-					<p>At 1st level, a swashbuckler can spend 1 panache point when she makes an Acrobatics, Climb, Escape Artist, Fly, Ride, or Swim check to roll 1d6 and add the result to the check. She can do this after she makes the check but before the result is revealed. If the result of the d6 roll is a natural 6, she rolls another 1d6 and adds it to the check. She can continue to do this as long as she rolls natural 6s, up to a number of times equal to her Dexterity modifier (minimum 1).</p>
-				</div>
-				<h3>Dodging Panache (Ex) - Dodge dem melee attacks</h3>
-				<div>
-					<p>At 1st level, when an opponent attempts a melee attack against the swashbuckler, the swashbuckler can as an immediate action spend 1 panache point to move 5 feet; doing so grants the swashbuckler a dodge bonus to AC equal to her Charisma modifier (minimum 0) against the triggering attack. This movement doesn’t negate the attack, which is still resolved as if the swashbuckler had not moved from the original square. This movement is not a 5-foot step; it provokes attacks of opportunity from creatures other than the one who triggered this deed. The swashbuckler can only perform this deed while wearing light or no armor, and while carrying no heavier than a light load.</p>
-				</div>
-				<h3>Opportune Parry and Riposte (Ex) - Counterattack</h3>
-				<div>
-					<p>At 1st level, when an opponent makes a melee attack against the swashbuckler, she can spend 1 panache point and expend a use of an attack of opportunity to attempt to parry that attack. The swashbuckler makes an attack roll as if she were making an attack of opportunity; for each size category the attacking creature is larger than the swashbuckler, the swashbuckler takes a –2 penalty on this roll. If her result is greater than the attacking creature’s result, the creature’s attack automatically misses. The swashbuckler must declare the use of this ability after the creature’s attack is announced, but before its attack roll is made. Upon performing a successful parry and if she has at least 1 panache point, the swashbuckler can as an immediate action make an attack against the creature whose attack she parried, provided that creature is within her reach. This deed’s cost cannot be reduced by any ability or effect that reduces the number of panache points a deed costs.</p>
-				</div>
-			</div>
-
-			<div class="use-deed-buttons">
-				<button class="use-deed" id="dodging-panache">Use Deed</button>
-			</div>
-
-		</div>
-	</div>
+<div class="pulse-circle"></div>
+<div class="circle-one"></div>
+<div class="circle-two"></div>
+<div class="circle-three"></div>
+<div class="circle-four"></div>
 
 </body>
-
 </html>
