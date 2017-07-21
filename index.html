@@ -1,17 +1,176 @@
 <!doctype HTML>
 
 <html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script>
+
+    window.setInterval(function(){
+        var now = new Date();
+        console.log(now.getHours() + ":" + now.getMinutes());
+    }, 1000);
+
+    </script>
+
+</head>
 <style>
 
 body {
 	background-color: #36454f;
 }
 
+.binary-clock {
+    position: relative;
+    height: 100vh;
+}
+
+/* Building */
+
+.building {
+    position: absolute;
+    background-color: #4f4f4f;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -150px;
+    width: 190px;
+    height: 285px;
+}
+
+/* Types of Windows */
+
+.window-square {
+    border-left: 5px solid #b3b300;
+    background-color: #ffff00;
+    width: 30px;
+    height:35px;
+}
+
+.window-round {
+    border-left: 5px solid #b3b300;
+    background-color: #ffff00;
+    border-radius: 10px 10px 0 0;
+    width: 30px;
+    height: 60px;
+}
+
+.window-rounder {
+    border-left: 5px solid #b3b300;
+    background-color: #ffff00;
+    border-radius: 20px 20px 0 0;
+    width: 30px;
+    height: 40px;
+}
+
+/* Specific Windows */
+
+#window-one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#window-two {
+    position: absolute;
+    top: 10px;
+    left: 55px;
+}
+
+#window-three {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+
+#window-four {
+    position: absolute;
+    top: 10px;
+    left: 145px;
+}
+
+#window-five {
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+#window-six {
+    position: absolute;
+    top: 65px;
+    left: 55px;
+}
+
+#window-seven {
+    position: absolute;
+    top: 65px;
+    left: 100px;
+}
+
+#window-eight {
+    position: absolute;
+    top: 65px;
+    left: 145px;
+}
+
+#window-nine {
+    position: absolute;
+    top: 145px;
+    left: 10px;
+}
+
+#window-ten {
+    position: absolute;
+    top: 145px;
+    left: 55px;
+}
+
+#window-eleven {
+    position: absolute;
+    top: 145px;
+    left: 100px;
+}
+
+#window-twelve {
+    position: absolute;
+    top: 145px;
+    left: 145px;
+}
+
+#window-thirteen {
+    position: absolute;
+    top: 225px;
+    left: 10px;
+}
+
+#window-fourteen {
+    position: absolute;
+    top: 225px;
+    left: 55px;
+}
+
+#door {
+    position: absolute;
+    top: 225px;
+    left: 100px;
+}
+
+#window-fifteen {
+    position: absolute;
+    top: 225px;
+    left: 145px;
+}
+
+.circle-fun {
+    position: relative;
+}
+
 .pulse-circle {
 	position: absolute;
-	top: 230px;
-	left: 230px;
+	top: 50%;
+	left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
     border: 4px solid #db3498;
     border-radius: 50%;
     width: 60px;
@@ -21,8 +180,10 @@ body {
 
 .circle-one {
 	position: absolute;
-	top: 200px;
-	left: 200px;
+	top: 50%;
+	left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
     border: 4px solid transparent;
     border-top: 4px solid #3498db; 
     border-right: 4px solid #3498db; 
@@ -35,8 +196,10 @@ body {
 
 .circle-two {
 	position: absolute;
-	top: 190px;
-	left: 190px;
+	top: 50%;
+	left: 50%;
+    margin-top: -70px;
+    margin-left: -70px;
     border: 4px solid transparent;
     border-left: 4px solid #db7734; 
     border-right: 4px solid #db7734; 
@@ -49,8 +212,10 @@ body {
 
 .circle-three {
 	position: absolute;
-	top: 180px;
-	left: 180px;
+	top: 50%;
+	left: 50%;
+    margin-top: -80px;
+    margin-left: -80px;
     border: 4px solid transparent;
     border-left: 4px solid #34db77; 
     border-right: 4px solid #34db77; 
@@ -63,8 +228,10 @@ body {
 
 .circle-four {
 	position: absolute;
-	top: 170px;
-	left: 170px;
+	top: 50%;
+	left: 50%;
+    margin-top: -90px;
+    margin-left: -90px;
     border: 4px solid transparent;
     border-left: 4px solid #db3498; 
     border-right: 4px solid #db3498; 
@@ -88,11 +255,66 @@ body {
 
 <body>
 
-<div class="pulse-circle"></div>
-<div class="circle-one"></div>
-<div class="circle-two"></div>
-<div class="circle-three"></div>
-<div class="circle-four"></div>
+    <div class="binary-clock">
+        <div class="building">
+            <div class="window" id="window-one">
+                <div class="window-square"></div>
+            </div>
+            <div class="window" id="window-two">
+                <div class="window-square"></div>
+            </div>
+            <div class="window" id="window-three">
+                <div class="window-square"></div>
+            </div>
+            <div class="window" id="window-four">
+                <div class="window-square"></div>
+            </div>
+            <div class="window" id="window-five">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-six">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-seven">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-eight">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-nine">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-ten">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-eleven">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-twelve">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-thirteen">
+                <div class="window-rounder"></div>
+            </div>
+            <div class="window" id="window-fourteen">
+                <div class="window-rounder"></div>
+            </div>
+            <div class="window" id="door">
+                <div class="window-round"></div>
+            </div>
+            <div class="window" id="window-fifteen">
+                <div class="window-rounder"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="circle-fun">
+        <div class="pulse-circle"></div>
+        <div class="circle-one"></div>
+        <div class="circle-two"></div>
+        <div class="circle-three"></div>
+        <div class="circle-four"></div>
+    </div>
 
 </body>
 </html>
